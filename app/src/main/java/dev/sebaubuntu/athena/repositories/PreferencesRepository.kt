@@ -40,5 +40,10 @@ class PreferencesRepository(
         true,
     ).asPreferenceHolder()
 
+    val language = primitivePreference(
+        "language",
+        "system",
+    ).asPreferenceHolder()
+
     private fun <T> Preference<T>.asPreferenceHolder() = PreferenceHolder(this)
 }

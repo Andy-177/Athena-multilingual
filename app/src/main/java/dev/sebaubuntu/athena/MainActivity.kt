@@ -5,6 +5,7 @@
 
 package dev.sebaubuntu.athena
 
+import android.content.Context
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -16,6 +17,14 @@ import dev.sebaubuntu.athena.utils.PermissionsManager
 
 class MainActivity : ComponentActivity() {
     private val permissionsManager = PermissionsManager(this)
+
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(
+            AthenaApplication.wrapContextWithLocale(
+                newBase, AthenaApplication.savedLanguageTag
+            )
+        )
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

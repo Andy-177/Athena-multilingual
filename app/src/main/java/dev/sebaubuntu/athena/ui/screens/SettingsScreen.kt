@@ -7,18 +7,27 @@ package dev.sebaubuntu.athena.ui.screens
 
 import android.content.Intent
 import android.os.Build
+import androidx.activity.ComponentActivity
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.selection.selectable
+import androidx.compose.foundation.selection.selectableGroup
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.AlertDialogDefaults
 import androidx.compose.material3.BasicAlertDialog
+import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -26,24 +35,30 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.ListItem
 import androidx.compose.material3.ListItemDefaults
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.RadioButton
 import androidx.compose.material3.SnackbarResult
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.unit.dp
 import androidx.core.net.toUri
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
+import dev.sebaubuntu.athena.AthenaApplication
 import dev.sebaubuntu.athena.R
 import dev.sebaubuntu.athena.core.models.Result
 import dev.sebaubuntu.athena.models.Theme
@@ -54,6 +69,31 @@ import dev.sebaubuntu.athena.ui.composables.PreferenceCategoryCard
 import dev.sebaubuntu.athena.ui.composables.PreferenceListItem
 import dev.sebaubuntu.athena.ui.composables.SwitchPreferenceListItem
 import dev.sebaubuntu.athena.viewmodels.SettingsViewModel
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import java.util.Locale
+
+private val languageTags = listOf(
+    "system", "af", "ar", "ca", "cs", "da", "de", "el", "en", "eo", "es",
+    "fa", "fi", "fr", "hi", "hu", "id", "it", "he", "ja", "ko", "nl", "no",
+    "pl", "pt-BR", "pt-PT", "ro", "ru", "sr", "sv", "ta", "tr", "uk", "vi",
+    "zh-CN", "zh-TW"
+)
+
+private fun languageDisplayName(tag: String): String {
+    if (tag == "system") return "System default"
+    val locale = when (tag) {
+        "id" -> Locale("in", "ID")
+        "he" -> Locale("iw", "IL")
+        "zh-CN" -> Locale("zh", "CN")
+        "zh-TW" -> Locale("zh", "TW")
+        "pt-BR" -> Locale("pt", "BR")
+        "pt-PT" -> Locale("pt", "PT")
+        else -> Locale(tag)
+    }
+    return locale.getDisplayName(locale)
+}
 
 /**
  * App settings screen.
@@ -84,6 +124,11 @@ fun SettingsScreen(
             PreferenceCategoryCard(
                 titleStringResId = R.string.settings_general,
             ) {
+                LanguagePreferenceListItem(
+                    preferenceHolder = settingsViewModel.language,
+                    onPreferenceChange = settingsViewModel::setPreferenceValue,
+                )
+
                 EnumPreferenceListItem(
                     preferenceHolder = settingsViewModel.theme,
                     onPreferenceChange = settingsViewModel::setPreferenceValue,
@@ -120,6 +165,98 @@ fun SettingsScreen(
             AboutCard()
         }
     }
+}
+
+@Composable
+private fun LanguagePreferenceListItem(
+    preferenceHolder: dev.sebaubuntu.athena.repositories.PreferencesRepository.PreferenceHolder<String>,
+    onPreferenceChange: (dev.sebaubuntu.athena.repositories.PreferencesRepository.PreferenceHolder<String>, String) -> Unit,
+) {
+    val currentTag by preferenceHolder.collectAsStateWithLifecycle("system")
+    var dialogOpened by remember { mutableStateOf(false) }
+    val scope = rememberCoroutineScope()
+    val context = LocalContext.current
+
+    if (dialogOpened) {
+        var selectedTag by remember { mutableStateOf(currentTag) }
+
+        AlertDialog(
+            onDismissRequest = { dialogOpened = false },
+            confirmButton = {
+                Button(
+                    onClick = {
+                        if (selectedTag != currentTag) {
+                            scope.launch(Dispatchers.IO) {
+                                preferenceHolder.setValue(selectedTag)
+                                AthenaApplication.savedLanguageTag = selectedTag
+                                withContext(Dispatchers.Main) {
+                                    (context as ComponentActivity).recreate()
+                                }
+                            }
+                        }
+                        dialogOpened = false
+                    }
+                ) {
+                    Text(text = stringResource(android.R.string.ok))
+                }
+            },
+            dismissButton = {
+                Button(
+                    onClick = { dialogOpened = false }
+                ) {
+                    Text(text = stringResource(android.R.string.cancel))
+                }
+            },
+            title = {
+                Text(text = "Language")
+            },
+            text = {
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .selectableGroup(),
+                ) {
+                    languageTags.forEach { tag ->
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .height(48.dp)
+                                .selectable(
+                                    selected = (tag == selectedTag),
+                                    onClick = { selectedTag = tag },
+                                    role = Role.RadioButton
+                                ),
+                            verticalAlignment = Alignment.CenterVertically,
+                        ) {
+                            RadioButton(
+                                selected = tag == selectedTag,
+                                onClick = null,
+                            )
+                            Text(
+                                text = languageDisplayName(tag),
+                                modifier = Modifier.padding(start = 16.dp),
+                                color = MaterialTheme.colorScheme.onSurface,
+                                style = MaterialTheme.typography.bodyLarge,
+                            )
+                        }
+                    }
+                }
+            },
+        )
+    }
+
+    ListItem(
+        headlineContent = {
+            Text(text = "Language")
+        },
+        supportingContent = {
+            Text(text = languageDisplayName(currentTag))
+        },
+        modifier = Modifier.clickable { dialogOpened = true },
+        colors = ListItemDefaults.colors(
+            containerColor = Color.Transparent,
+        ),
+    )
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
