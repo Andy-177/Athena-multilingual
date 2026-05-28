@@ -13,15 +13,18 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.selection.selectableGroup
 import androidx.compose.material3.AlertDialog
@@ -39,6 +42,7 @@ import androidx.compose.material3.RadioButton
 import androidx.compose.material3.SnackbarResult
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -180,69 +184,90 @@ private fun LanguagePreferenceListItem(
     if (dialogOpened) {
         var selectedTag by remember { mutableStateOf(currentTag) }
 
-        AlertDialog(
-            onDismissRequest = { dialogOpened = false },
-            confirmButton = {
-                Button(
-                    onClick = {
-                        if (selectedTag != currentTag) {
-                            scope.launch(Dispatchers.IO) {
-                                preferenceHolder.setValue(selectedTag)
-                                AthenaApplication.savedLanguageTag = selectedTag
-                                withContext(Dispatchers.Main) {
-                                    (context as ComponentActivity).recreate()
-                                }
+        // 使用 BasicAlertDialog 替代 AlertDialog 以支持滚动
+        BasicAlertDialog(
+            onDismissRequest = { dialogOpened = false }
+        ) {
+            Surface(
+                modifier = Modifier
+                    .fillMaxWidth(0.9f)
+                    .heightIn(max = 500.dp),
+                shape = MaterialTheme.shapes.large,
+                tonalElevation = AlertDialogDefaults.TonalElevation,
+            ) {
+                Column(
+                    modifier = Modifier.fillMaxSize()
+                ) {
+                    // 标题
+                    Text(
+                        text = "Language",
+                        style = MaterialTheme.typography.headlineSmall,
+                        modifier = Modifier.padding(20.dp)
+                    )
+                    
+                    // 可滚动的语言列表
+                    LazyColumn(
+                        modifier = Modifier.weight(1f),
+                    ) {
+                        items(languageTags) { tag ->
+                            Row(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .height(48.dp)
+                                    .selectable(
+                                        selected = (tag == selectedTag),
+                                        onClick = { selectedTag = tag },
+                                        role = Role.RadioButton
+                                    )
+                                    .padding(horizontal = 20.dp),
+                                verticalAlignment = Alignment.CenterVertically,
+                            ) {
+                                RadioButton(
+                                    selected = tag == selectedTag,
+                                    onClick = null,
+                                )
+                                Text(
+                                    text = languageDisplayName(tag),
+                                    modifier = Modifier.padding(start = 16.dp),
+                                    color = MaterialTheme.colorScheme.onSurface,
+                                    style = MaterialTheme.typography.bodyLarge,
+                                )
                             }
                         }
-                        dialogOpened = false
                     }
-                ) {
-                    Text(text = stringResource(android.R.string.ok))
-                }
-            },
-            dismissButton = {
-                Button(
-                    onClick = { dialogOpened = false }
-                ) {
-                    Text(text = stringResource(android.R.string.cancel))
-                }
-            },
-            title = {
-                Text(text = "Language")
-            },
-            text = {
-                Column(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .selectableGroup(),
-                ) {
-                    languageTags.forEach { tag ->
-                        Row(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .height(48.dp)
-                                .selectable(
-                                    selected = (tag == selectedTag),
-                                    onClick = { selectedTag = tag },
-                                    role = Role.RadioButton
-                                ),
-                            verticalAlignment = Alignment.CenterVertically,
+                    
+                    // 按钮区域
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(8.dp),
+                        horizontalArrangement = Arrangement.End
+                    ) {
+                        TextButton(
+                            onClick = { dialogOpened = false }
                         ) {
-                            RadioButton(
-                                selected = tag == selectedTag,
-                                onClick = null,
-                            )
-                            Text(
-                                text = languageDisplayName(tag),
-                                modifier = Modifier.padding(start = 16.dp),
-                                color = MaterialTheme.colorScheme.onSurface,
-                                style = MaterialTheme.typography.bodyLarge,
-                            )
+                            Text(stringResource(android.R.string.cancel))
+                        }
+                        TextButton(
+                            onClick = {
+                                if (selectedTag != currentTag) {
+                                    scope.launch(Dispatchers.IO) {
+                                        preferenceHolder.setValue(selectedTag)
+                                        AthenaApplication.savedLanguageTag = selectedTag
+                                        withContext(Dispatchers.Main) {
+                                            (context as ComponentActivity).recreate()
+                                        }
+                                    }
+                                }
+                                dialogOpened = false
+                            }
+                        ) {
+                            Text(stringResource(android.R.string.ok))
                         }
                     }
                 }
-            },
-        )
+            }
+        }
     }
 
     ListItem(
