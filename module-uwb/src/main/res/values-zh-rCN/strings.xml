@@ -6,25 +6,25 @@
 <resources>
     <!-- UWB section -->
     <string name="section_uwb_name">UWB</string>
-    <string name="section_uwb_description">Ultra-wideband communication</string>
-    <string name="uwb_supported">Supported</string>
-    <string name="uwb_enabled">Enabled</string>
-    <string name="uwb_enable_notice">Enable UWB to check its capabilities</string>
-    <string name="uwb_ranging_capabilities">Ranging capabilities</string>
-    <string name="uwb_is_distance_supported">Is distance ranging supported</string>
-    <string name="uwb_is_azimuthal_angle_supported">Is azimuthal angle of arrival supported</string>
-    <string name="uwb_is_elevation_angle_supported">Is elevation angle of arrival supported</string>
-    <string name="uwb_min_ranging_interval">Minimum ranging interval</string>
-    <string name="uwb_supported_channels">Supported channels</string>
-    <string name="uwb_supported_ntf_configs">Supported notification configs</string>
-    <string name="uwb_supported_config_ids">Supported config IDs</string>
-    <string name="uwb_supported_slot_durations">Supported slot durations</string>
-    <string name="uwb_supported_ranging_update_rates">Supported ranging update rates</string>
-    <string name="uwb_is_ranging_interval_reconfigure_supported">Is ranging interval reconfiguration supported</string>
-    <string name="uwb_is_background_ranging_supported">Can ranging be started when the app is in background</string>
-    <string name="uwb_local_address">Local address</string>
-    <string name="uwb_local_address_address">Address</string>
-    <string name="uwb_complex_channel">Complex channel</string>
-    <string name="uwb_complex_channel_channel">Channel</string>
-    <string name="uwb_complex_channel_preamble_index">Preamble index</string>
+    <string name="section_uwb_description">超宽带通信</string>
+    <string name="uwb_supported">支持</string>
+    <string name="uwb_enabled">已启用</string>
+    <string name="uwb_enable_notice">启用 UWB 以查看其功能</string>
+    <string name="uwb_ranging_capabilities">测距功能</string>
+    <string name="uwb_is_distance_supported">支持距离测距</string>
+    <string name="uwb_is_azimuthal_angle_supported">支持到达方位角</string>
+    <string name="uwb_is_elevation_angle_supported">支持到达仰角</string>
+    <string name="uwb_min_ranging_interval">最小测距间隔</string>
+    <string name="uwb_supported_channels">支持的通道</string>
+    <string name="uwb_supported_ntf_configs">支持的通知配置</string>
+    <string name="uwb_supported_config_ids">支持的配置 ID</string>
+    <string name="uwb_supported_slot_durations">支持的时隙长度</string>
+    <string name="uwb_supported_ranging_update_rates">支持的测距更新率</string>
+    <string name="uwb_is_ranging_interval_reconfigure_supported">支持测距间隔重新配置</string>
+    <string name="uwb_is_background_ranging_supported">可在应用后台时进行测距</string>
+    <string name="uwb_local_address">本地地址</string>
+    <string name="uwb_local_address_address">地址</string>
+    <string name="uwb_complex_channel">复杂通道</string>
+    <string name="uwb_complex_channel_channel">通道</string>
+    <string name="uwb_complex_channel_preamble_index">前导码索引</string>
 </resources>

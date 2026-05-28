@@ -5,19 +5,19 @@
 -->
 <resources>
     <!-- User section -->
-    <string name="section_user_name">User</string>
-    <string name="section_user_description">Check current user info</string>
-    <string name="current_user">Current user</string>
-    <string name="user_id">User ID</string>
-    <string name="is_admin_user">Is admin user</string>
-    <string name="is_demo_user">Is demo user</string>
-    <string name="is_managed_profile_user">Is managed profile user</string>
-    <string name="is_profile">Is profile</string>
-    <string name="is_system_user">Is system user</string>
-    <string name="is_user_a_goat">Is user a goat</string>
-    <string name="is_user_foreground">Is user foreground</string>
-    <string name="is_user_unlocked">Is user unlocked</string>
-    <string name="user_serial_number">User serial number</string>
-    <string name="quiet_mode_enabled">Quiet mode enabled</string>
-    <string name="user_creation_time">User creation time</string>
+    <string name="section_user_name">用户</string>
+    <string name="section_user_description">查看当前用户信息</string>
+    <string name="current_user">当前用户</string>
+    <string name="user_id">用户 ID</string>
+    <string name="is_admin_user">是否为管理员用户</string>
+    <string name="is_demo_user">是否为演示用户</string>
+    <string name="is_managed_profile_user">是否为托管配置文件用户</string>
+    <string name="is_profile">是否为配置文件</string>
+    <string name="is_system_user">是否为系统用户</string>
+    <string name="is_user_a_goat">用户是否为羊</string>
+    <string name="is_user_foreground">用户是否在前台</string>
+    <string name="is_user_unlocked">用户是否已解锁</string>
+    <string name="user_serial_number">用户序列号</string>
+    <string name="quiet_mode_enabled">已启用安静模式</string>
+    <string name="user_creation_time">用户创建时间</string>
 </resources>

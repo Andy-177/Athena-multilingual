@@ -5,21 +5,22 @@
 -->
 <resources>
     <!-- Biometrics section -->
-    <string name="section_biometrics_name">Biometrics</string>
-    <string name="section_biometrics_description">Biometrics info</string>
-    <string name="biometrics_can_authenticate_with_device_credential">Can authenticate with device credential</string>
-    <string name="biometrics_can_authenticate_with_weak_biometric">Can authenticate with weak biometric</string>
-    <string name="biometrics_can_authenticate_with_strong_biometric">Can authenticate with strong biometric</string>
-    <string name="device_credential_strings">Device credential strings</string>
-    <string name="biometric_weak_strings">Weak biometric strings</string>
-    <string name="biometric_strong_strings">Strong biometric strings</string>
-    <string name="biometrics_setting_name">Setting name</string>
-    <string name="biometrics_button_label">Button label</string>
-    <string name="biometrics_prompt_message">Prompt message</string>
+    <string name="section_biometrics_name">生物识别</string>
+    <string name="section_biometrics_description">生物识别信息</string>
+    <string name="biometrics_can_authenticate_with_device_credential">可通过设备凭据进行身份验证</string>
+    <string name="biometrics_can_authenticate_with_weak_biometric">可通过弱生物识别进行身份验证</string>
+    <string name="biometrics_can_authenticate_with_strong_biometric">可通过强生物识别进行身份验证</string>
+    <string name="device_credential_strings">设备凭据字符串</string>
+    <string name="biometric_weak_strings">弱生物识别字符串</string>
+    <string name="biometric_strong_strings">强生物识别字符串</string>
+    <string name="biometrics_setting_name">设置名称</string>
+    <string name="biometrics_button_label">按钮标签</string>
+    <string name="biometrics_prompt_message">提示消息</string>
+
     <!-- Biometric errors -->
-    <string name="biometric_error_success">Success</string>
-    <string name="biometric_error_hw_unavaliable">Hardware unavailable</string>
-    <string name="biometric_error_none_enrolled">No biometrics enrolled</string>
-    <string name="biometric_error_no_hardware">No biometric hardware</string>
-    <string name="biometric_error_security_update_required">Security update required</string>
+    <string name="biometric_error_success">成功</string>
+    <string name="biometric_error_hw_unavaliable">硬件不可用</string>
+    <string name="biometric_error_none_enrolled">未录入任何生物信息</string>
+    <string name="biometric_error_no_hardware">无生物识别硬件</string>
+    <string name="biometric_error_security_update_required">需要安全更新</string>
 </resources>

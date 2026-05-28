@@ -5,12 +5,17 @@
 -->
 <resources>
     <!-- RIL section -->
-    <string name="section_ril_description">Radio Interface Layer info</string>
-    <string name="ril_active_modem_count">Active modem count</string>
-    <string name="ril_device_software_version">Device software version</string>
-    <string name="ril_is_world_phone">Is world phone</string>
-    <string name="ril_manufacturer_code">Manufacturer code</string>
-    <string name="ril_phone_type">Phone type</string>
+    <string name="section_ril_name" translatable="false">RIL</string>
+    <string name="section_ril_description">无线接口层信息</string>
+    <string name="ril_active_modem_count">活跃调制解调器数量</string>
+    <string name="ril_device_software_version">设备软件版本</string>
+    <string name="ril_is_world_phone">是否为全球通手机</string>
+    <string name="ril_manufacturer_code">制造商代码</string>
+    <string name="ril_phone_type">电话类型</string>
+
     <!-- RIL phone types -->
-    <string name="ril_phone_type_none">None</string>
+    <string name="ril_phone_type_none">无</string>
+    <string name="ril_phone_type_gsm" translatable="false">GSM</string>
+    <string name="ril_phone_type_cdma" translatable="false">CDMA</string>
+    <string name="ril_phone_type_sip" translatable="false">SIP</string>
 </resources>

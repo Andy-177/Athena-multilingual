@@ -5,35 +5,60 @@
 -->
 <resources>
     <!-- Display section -->
-    <string name="section_display_name">Display</string>
-    <string name="section_display_description">Screen and GPU info</string>
-    <string name="display_title">Display %d</string>
+    <string name="section_display_name">显示</string>
+    <string name="section_display_description">屏幕和 GPU 信息</string>
+    <string name="display_title">显示 %d</string>
     <string name="display_id">ID</string>
-    <string name="display_name">Name</string>
-    <string name="display_product_name">Product name</string>
-    <string name="display_manufacturer_pnp_id">Manufacturer PnP ID</string>
-    <string name="display_manufacturer_product_id">Manufacturer product ID</string>
-    <string name="display_model_year">Model year</string>
-    <string name="display_manufacture_week">Manufacture week</string>
-    <string name="display_manufacture_year">Manufacture year</string>
-    <string name="display_connection_to_sink_type">Connection to sink type</string>
-    <string name="display_is_valid">Is valid</string>
-    <string name="display_is_hdr">Is HDR</string>
-    <string name="display_is_wide_color_gamut">Is wide color gamut</string>
-    <string name="display_preferred_wcg_color_space">Preferred wide color gamut color space</string>
-    <string name="display_is_minimal_post_processing_supported">Is minimal post processing supported</string>
-    <string name="display_mode_not_active">Mode %d</string>
-    <string name="display_mode_active">Mode %d (active)</string>
+    <string name="display_name">名称</string>
+    <string name="display_product_name">产品名称</string>
+    <string name="display_manufacturer_pnp_id">制造商 PnP ID</string>
+    <string name="display_manufacturer_product_id">制造商产品 ID</string>
+    <string name="display_model_year">型号年份</string>
+    <string name="display_manufacture_week">生产周</string>
+    <string name="display_manufacture_year">生产年份</string>
+    <string name="display_connection_to_sink_type">连接到接收器类型</string>
+    <string name="display_is_valid">是否有效</string>
+    <string name="display_is_hdr">是否支持 HDR</string>
+    <string name="display_flags">标志</string>
+    <string name="display_flag_supports_protected_buffers">支持受保护的缓冲区</string>
+    <string name="display_flag_secure">安全</string>
+    <string name="display_flag_private">私有</string>
+    <string name="display_flag_presentation">演示</string>
+    <string name="display_flag_round">圆形</string>
+    <string name="display_flag_can_show_with_insecure_keyguard">可在非安全锁屏界面显示</string>
+    <string name="display_flag_should_show_system_decorations">应显示系统装饰</string>
+    <string name="display_flag_trusted">可信</string>
+    <string name="display_flag_own_display_group">拥有自己的显示组</string>
+    <string name="display_flag_always_unlocked">始终解锁</string>
+    <string name="display_flag_touch_feedback_disabled">触控反馈已禁用</string>
+    <string name="display_flag_own_focus">拥有自己的焦点</string>
+    <string name="display_flag_steal_top_focus_disabled">禁止抢夺顶部焦点</string>
+    <string name="display_flag_rear">后置</string>
+    <string name="display_flag_rotates_with_content">随内容旋转</string>
+    <string name="display_flag_allows_content_mode_switch">允许内容模式切换</string>
+    <string name="display_flag_scaling_disabled">缩放已禁用</string>
+    <string name="display_is_wide_color_gamut">广色域</string>
+    <string name="display_preferred_wcg_color_space">首选广色域色彩空间</string>
+    <string name="display_is_minimal_post_processing_supported">支持最小后处理</string>
+    <string name="display_mode_not_active">模式 %d</string>
+    <string name="display_mode_active">模式 %d（活动）</string>
     <string name="display_mode_id">ID</string>
-    <string name="display_mode_resolution">Resolution</string>
-    <string name="display_mode_alternative_refresh_rates">Alternative refresh rates</string>
-    <string name="display_mode_supported_hdr_types">Supported HDR types</string>
-    <string name="display_host_usi_version">Host USI version</string>
+    <string name="display_mode_resolution">分辨率</string>
+    <string name="display_mode_resolution_format" translatable="false">%dx%d@%f</string>
+    <string name="display_mode_alternative_refresh_rates">可选刷新率</string>
+    <string name="display_mode_supported_hdr_types">支持的 HDR 类型</string>
+    <string name="display_host_usi_version">主机 USI 版本</string>
+
     <!-- Display connection to sink types -->
-    <string name="display_connection_to_sink_unknown">Unknown</string>
-    <string name="display_connection_to_sink_built_in">Built-in</string>
-    <string name="display_connection_to_sink_direct">Direct</string>
-    <string name="display_connection_to_sink_transitive">Transitive</string>
+    <string name="display_connection_to_sink_unknown">未知</string>
+    <string name="display_connection_to_sink_built_in">内置</string>
+    <string name="display_connection_to_sink_direct">直接</string>
+    <string name="display_connection_to_sink_transitive">间接</string>
+
     <!-- Display HDR types -->
-    <string name="display_hdr_type_invalid">Invalid</string>
+    <string name="display_hdr_type_invalid">无效</string>
+    <string name="display_hdr_type_dolby_vision" translatable="false">Dolby Vision</string>
+    <string name="display_hdr_type_hdr10" translatable="false">HDR10</string>
+    <string name="display_hdr_type_hlg" translatable="false">Hybrid Log-Gamma (HLG)</string>
+    <string name="display_hdr_type_hdr10_plus" translatable="false">HDR10+</string>
 </resources>

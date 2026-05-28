@@ -5,59 +5,65 @@
 -->
 <resources>
     <!-- Input section -->
-    <string name="section_input_name">Input</string>
-    <string name="section_input_description">Input devices information</string>
-    <string name="input_devices">Devices</string>
-    <string name="input_maximum_obscuring_opacity_for_touch">Maximum obscuring opacity for touch</string>
-    <string name="input_is_stylus_pointer_icon_enabled">Is stylus pointer icon enabled</string>
+    <string name="section_input_name">输入</string>
+    <string name="section_input_description">输入设备信息</string>
+    <string name="input_devices">设备</string>
+    <string name="input_maximum_obscuring_opacity_for_touch">触控最大遮挡透明度</string>
+    <string name="input_is_stylus_pointer_icon_enabled">手写笔指针图标已启用</string>
+
     <!-- Input device -->
-    <string name="input_device_title">Input device %d</string>
+    <string name="input_device_title">输入设备 %d</string>
     <string name="input_device_id">ID</string>
-    <string name="input_device_controller_number">Controller number</string>
-    <string name="input_device_vendor_id">Vendor ID</string>
-    <string name="input_device_product_id">Product ID</string>
-    <string name="input_device_descriptor">Descriptor</string>
-    <string name="input_device_is_virtual">Is virtual</string>
-    <string name="input_device_is_external">Is external</string>
-    <string name="input_device_name">Name</string>
-    <string name="input_device_source_classes">Source classes</string>
-    <string name="input_device_sources">Sources</string>
-    <string name="input_device_keyboard_type">Keyboard type</string>
-    <string name="input_device_key_character_map_keyboard_type">KeyCharacterMap keyboard type</string>
-    <string name="input_device_motion_ranges_count">Motion ranges count</string>
-    <string name="input_device_has_vibrator">Has vibrator</string>
-    <string name="input_device_battery">Battery</string>
-    <string name="input_device_battery_status">Status</string>
-    <string name="input_device_battery_capacity">Capacity</string>
-    <string name="input_device_sensor">Sensor %d</string>
-    <string name="input_device_is_enabled">Is enabled</string>
-    <string name="input_device_has_microphone">Has microphone</string>
+    <string name="input_device_controller_number">控制器编号</string>
+    <string name="input_device_vendor_id">供应商 ID</string>
+    <string name="input_device_product_id">产品 ID</string>
+    <string name="input_device_descriptor">描述符</string>
+    <string name="input_device_is_virtual">是否为虚拟设备</string>
+    <string name="input_device_is_external">是否为外部设备</string>
+    <string name="input_device_name">名称</string>
+    <string name="input_device_source_classes">源类别</string>
+    <string name="input_device_sources">源</string>
+    <string name="input_device_keyboard_type">键盘类型</string>
+    <string name="input_device_key_character_map_keyboard_type">按键字符映射键盘类型</string>
+    <string name="input_device_motion_ranges_count">运动范围数量</string>
+    <string name="input_device_has_vibrator">有振动器</string>
+    <string name="input_device_battery">电池</string>
+    <string name="input_device_battery_status">状态</string>
+    <string name="input_device_battery_capacity">容量</string>
+    <string name="input_device_sensor">传感器 %d</string>
+    <string name="input_device_is_enabled">已启用</string>
+    <string name="input_device_has_microphone">有麦克风</string>
+
     <!-- Input device keyboard types -->
-    <string name="input_device_keyboard_type_none">None</string>
-    <string name="input_device_keyboard_type_non_alphabetic">Non alphabetic</string>
-    <string name="input_device_keyboard_type_alphabetic">Alphabetic</string>
+    <string name="input_device_keyboard_type_none">无</string>
+    <string name="input_device_keyboard_type_non_alphabetic">非字母</string>
+    <string name="input_device_keyboard_type_alphabetic">字母</string>
+
     <!-- KeyCharacterMap keyboard types -->
-    <string name="key_character_map_keyboard_type_numeric">Numeric</string>
-    <string name="key_character_map_keyboard_type_predictive">Predictive</string>
-    <string name="key_character_map_keyboard_type_alpha">Alpha</string>
-    <string name="key_character_map_keyboard_type_full">Full</string>
-    <string name="key_character_map_keyboard_type_special_function">Special function</string>
+    <string name="key_character_map_keyboard_type_numeric">数字</string>
+    <string name="key_character_map_keyboard_type_predictive">预测</string>
+    <string name="key_character_map_keyboard_type_alpha">字母</string>
+    <string name="key_character_map_keyboard_type_full">全键盘</string>
+    <string name="key_character_map_keyboard_type_special_function">特殊功能</string>
+
     <!-- Input device source classes -->
-    <string name="input_device_source_class_button">Button</string>
-    <string name="input_device_source_class_pointer">Pointer</string>
-    <string name="input_device_source_class_trackball">Trackball</string>
-    <string name="input_device_source_class_position">Position</string>
-    <string name="input_device_source_class_joystick">Joystick</string>
+    <string name="input_device_source_class_button">按钮</string>
+    <string name="input_device_source_class_pointer">指针</string>
+    <string name="input_device_source_class_trackball">轨迹球</string>
+    <string name="input_device_source_class_position">位置</string>
+    <string name="input_device_source_class_joystick">摇杆</string>
+
     <!-- Input device sources -->
-    <string name="input_device_source_keyboard">Keyboard</string>
-    <string name="input_device_source_dpad">D-pad</string>
-    <string name="input_device_source_gamepad">Gamepad</string>
-    <string name="input_device_source_touchscreen">Touchscreen</string>
-    <string name="input_device_source_mouse">Mouse</string>
-    <string name="input_device_source_stylus">Stylus</string>
-    <string name="input_device_source_trackball">Trackball</string>
-    <string name="input_device_source_touchpad">Touchpad</string>
-    <string name="input_device_source_touch_navigation">Touch navigation</string>
-    <string name="input_device_source_rotary_encoder">Rotary encoder</string>
-    <string name="input_device_source_joystick">Joystick</string>
+    <string name="input_device_source_keyboard">键盘</string>
+    <string name="input_device_source_dpad">方向键</string>
+    <string name="input_device_source_gamepad">游戏手柄</string>
+    <string name="input_device_source_touchscreen">触摸屏</string>
+    <string name="input_device_source_mouse">鼠标</string>
+    <string name="input_device_source_stylus">手写笔</string>
+    <string name="input_device_source_trackball">轨迹球</string>
+    <string name="input_device_source_touchpad">触摸板</string>
+    <string name="input_device_source_touch_navigation">触摸导航</string>
+    <string name="input_device_source_rotary_encoder">旋转编码器</string>
+    <string name="input_device_source_joystick">摇杆</string>
+    <string name="input_device_source_hdmi" translatable="false">HDMI</string>
 </resources>
