@@ -5,39 +5,41 @@
 -->
 <resources>
     <!-- Camera section -->
-    <string name="section_camera_name">Camera</string>
-    <string name="section_camera_description">Camera info</string>
-    <string name="camera_title">Camera %s</string>
-    <string name="camera_facing">Facing</string>
-    <string name="camera_pixel_array_size">Pixel array size (resolution)</string>
-    <string name="camera_sensor_physical_size">Sensor physical size</string>
-    <string name="camera_has_flash_unit">Has flash unit</string>
-    <string name="camera_available_apertures">Available apertures</string>
-    <string name="camera_available_capablities">Available capabilities</string>
+    <string name="section_camera_name">相机</string>
+    <string name="section_camera_description">相机信息</string>
+    <string name="camera_title">相机 %s</string>
+    <string name="camera_facing">朝向</string>
+    <string name="camera_pixel_array_size">像素阵列大小（分辨率）</string>
+    <string name="camera_sensor_physical_size">传感器物理尺寸</string>
+    <string name="camera_has_flash_unit">闪光灯</string>
+    <string name="camera_available_apertures">可用光圈</string>
+    <string name="camera_available_capablities">可用功能</string>
+
     <!-- Camera facing -->
-    <string name="camera_facing_back">Back</string>
-    <string name="camera_facing_front">Front</string>
-    <string name="camera_facing_external">External</string>
+    <string name="camera_facing_back">后置</string>
+    <string name="camera_facing_front">前置</string>
+    <string name="camera_facing_external">外置</string>
+
     <!-- Camera capabilities -->
-    <string name="camera_capabilities_backward_compatible">Is backward compatible</string>
-    <string name="camera_capabilities_manual_sensor">Supports 3A manual controls</string>
-    <string name="camera_capabilities_manual_post_processing">Supports manual post-processing</string>
-    <string name="camera_capabilities_raw">Supports RAW</string>
-    <string name="camera_capabilities_private_reprocessing">Supports ZSL</string>
-    <string name="camera_capabilities_read_sensor_settings">Supports precise sensor settings reporting</string>
-    <string name="camera_capabilities_burst_capture">Supports burst capture</string>
-    <string name="camera_capabilities_yuv_reprocessing">Supports YUV reprocessing</string>
-    <string name="camera_capabilities_depth_output">Supports depth measurement</string>
-    <string name="camera_capabilities_constrained_high_speed_video">Supports HFR recording</string>
-    <string name="camera_capabilities_motion_tracking">Supports motion tracking</string>
-    <string name="camera_capabilities_logical_multi_camera">Is a logical camera</string>
-    <string name="camera_capabilities_monochrome">Is monochrome</string>
-    <string name="camera_capabilities_secure_image_data">Supports secure image captures</string>
-    <string name="camera_capabilities_system_camera">Only accessible to system camera apps</string>
-    <string name="camera_capabilities_offline_processing">Supports offline reprocessing</string>
-    <string name="camera_capabilities_ultra_high_resolution_sensor">Supports disabling pixel binning mode</string>
-    <string name="camera_capabilities_remosaic_processing">Supports remosaic reprocessing</string>
-    <string name="camera_capabilities_dynamic_range_ten_bit">Supports 10-bit HLG output</string>
-    <string name="camera_capabilities_stream_use_case">Supports stream use cases</string>
-    <string name="camera_capabilities_color_space_profiles">Supports color space profiles</string>
+    <string name="camera_capabilities_backward_compatible">向后兼容</string>
+    <string name="camera_capabilities_manual_sensor">支持 3A 手动控制</string>
+    <string name="camera_capabilities_manual_post_processing">支持手动后处理</string>
+    <string name="camera_capabilities_raw">支持 RAW</string>
+    <string name="camera_capabilities_private_reprocessing">支持 ZSL</string>
+    <string name="camera_capabilities_read_sensor_settings">支持精确的传感器设置报告</string>
+    <string name="camera_capabilities_burst_capture">支持连拍</string>
+    <string name="camera_capabilities_yuv_reprocessing">支持 YUV 再处理</string>
+    <string name="camera_capabilities_depth_output">支持深度测量</string>
+    <string name="camera_capabilities_constrained_high_speed_video">支持 HFR 高帧率录制</string>
+    <string name="camera_capabilities_motion_tracking">支持动作追踪</string>
+    <string name="camera_capabilities_logical_multi_camera">逻辑多摄像头</string>
+    <string name="camera_capabilities_monochrome">黑白相机</string>
+    <string name="camera_capabilities_secure_image_data">支持安全图像捕获</string>
+    <string name="camera_capabilities_system_camera">仅系统相机应用可访问</string>
+    <string name="camera_capabilities_offline_processing">支持离线再处理</string>
+    <string name="camera_capabilities_ultra_high_resolution_sensor">支持禁用像素合并模式</string>
+    <string name="camera_capabilities_remosaic_processing">支持重新马赛克再处理</string>
+    <string name="camera_capabilities_dynamic_range_ten_bit">支持 10 位 HLG 输出</string>
+    <string name="camera_capabilities_stream_use_case">支持流用例</string>
+    <string name="camera_capabilities_color_space_profiles">支持色彩空间配置文件</string>
 </resources>

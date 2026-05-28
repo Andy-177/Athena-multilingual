@@ -5,24 +5,31 @@
 -->
 <resources>
     <!-- Treble section -->
-    <string name="section_treble_description">Project Treble info</string>
-    <string name="treble_enabled">Treble enabled</string>
-    <string name="treble_vndk_version">VNDK version</string>
-    <string name="treble_interfaces">Interfaces</string>
-    <string name="treble_interface_name">Name</string>
-    <string name="treble_interface_type">Type</string>
-    <string name="treble_interface_transport">Transport</string>
-    <string name="treble_interface_server_process_id">Server process ID</string>
-    <string name="treble_interface_address">Address</string>
-    <string name="treble_interface_arch">Arch</string>
-    <string name="treble_interface_current_threads">Current threads</string>
-    <string name="treble_interface_max_threads">Max threads</string>
-    <string name="treble_interface_released">Released</string>
-    <string name="treble_interface_in_device_manifest">In device manifest</string>
-    <string name="treble_interface_in_device_compatibility_matrix">In device compatibility matrix</string>
-    <string name="treble_interface_in_framework_manifest">In framework manifest</string>
-    <string name="treble_interface_in_framework_compatibility_matrix">In framework compatibility matrix</string>
-    <string name="treble_interface_clients_process_ids">Clients process IDs</string>
+    <string name="section_treble_name" translatable="false">Treble</string>
+    <string name="section_treble_description">Project Treble 信息</string>
+    <string name="treble_enabled">Treble 已启用</string>
+    <string name="treble_vndk_version">VNDK 版本</string>
+    <string name="treble_interfaces">接口</string>
+    <string name="treble_interface_name">名称</string>
+    <string name="treble_interface_type">类型</string>
+    <string name="treble_interface_transport">传输方式</string>
+    <string name="treble_interface_server_process_id">服务器进程 ID</string>
+    <string name="treble_interface_address">地址</string>
+    <string name="treble_interface_arch">架构</string>
+    <string name="treble_interface_current_threads">当前线程数</string>
+    <string name="treble_interface_max_threads">最大线程数</string>
+    <string name="treble_interface_released">已发布</string>
+    <string name="treble_interface_in_device_manifest">在设备清单中</string>
+    <string name="treble_interface_in_device_compatibility_matrix">在设备兼容性矩阵中</string>
+    <string name="treble_interface_in_framework_manifest">在框架清单中</string>
+    <string name="treble_interface_in_framework_compatibility_matrix">在框架兼容性矩阵中</string>
+    <string name="treble_interface_clients_process_ids">客户端进程 ID</string>
+
     <!-- Treble interface type -->
+    <string name="treble_interface_type_aidl" translatable="false">AIDL</string>
+    <string name="treble_interface_type_hidl" translatable="false">HIDL</string>
+
     <!-- HIDL interface transport type -->
+    <string name="treble_interface_transport_hwbinder" translatable="false">HWBinder</string>
+    <string name="treble_interface_transport_passthrough">直通</string>
 </resources>

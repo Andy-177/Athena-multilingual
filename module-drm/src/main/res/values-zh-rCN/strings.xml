@@ -5,16 +5,18 @@
 -->
 <resources>
     <!-- DRM section -->
-    <string name="section_drm_description">DRM info</string>
-    <string name="drm_vendor">Vendor</string>
-    <string name="drm_version">Version</string>
-    <string name="drm_description">Description</string>
-    <string name="drm_algorithms">Algorithms</string>
-    <string name="drm_device_unique_id">Device unique ID</string>
-    <string name="drm_open_session_count">Open session count</string>
-    <string name="drm_max_session_count">Max session count</string>
-    <string name="drm_connected_hdcp_level">Connected HDCP level</string>
-    <string name="drm_max_hdcp_level">Max HDCP level</string>
-    <string name="drm_security_level">Security level</string>
-    <string name="drm_system_id">System ID</string>
+    <string name="section_drm_name" translatable="false">DRM</string>
+    <string name="section_drm_description">DRM 信息</string>
+    <string name="drm_uuid" translatable="false">UUID</string>
+    <string name="drm_vendor">供应商</string>
+    <string name="drm_version">版本</string>
+    <string name="drm_description">描述</string>
+    <string name="drm_algorithms">算法</string>
+    <string name="drm_device_unique_id">设备唯一 ID</string>
+    <string name="drm_open_session_count">打开的会话数</string>
+    <string name="drm_max_session_count">最大会话数</string>
+    <string name="drm_connected_hdcp_level">已连接 HDCP 级别</string>
+    <string name="drm_max_hdcp_level">最大 HDCP 级别</string>
+    <string name="drm_security_level">安全级别</string>
+    <string name="drm_system_id">系统 ID</string>
 </resources>

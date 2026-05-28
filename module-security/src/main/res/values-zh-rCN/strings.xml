@@ -5,13 +5,16 @@
 -->
 <resources>
     <!-- Security section -->
-    <string name="section_security_name">Security</string>
-    <string name="section_security_description">Security patch level and CVEs information</string>
-    <string name="security_is_device_fully_updated">Is device fully updated</string>
-    <string name="security_device_security_patch_level">Device security patch level</string>
-    <string name="security_published_security_patch_level">Published security patch level</string>
-    <string name="security_patched_cves">Patched CVEs</string>
+    <string name="section_security_name">安全</string>
+    <string name="section_security_description">安全补丁级别和 CVE 信息</string>
+    <string name="security_is_device_fully_updated">设备是否完全更新</string>
+    <string name="security_device_security_patch_level">设备安全补丁级别</string>
+    <string name="security_published_security_patch_level">已发布的安全补丁级别</string>
+    <string name="security_patched_cves">已修补的 CVE</string>
+
     <!-- Security components -->
-    <string name="security_component_system">System</string>
-    <string name="security_component_system_modules">System modules</string>
+    <string name="security_component_system">系统</string>
+    <string name="security_component_system_modules">系统模块</string>
+    <string name="security_component_vendor" translatable="false">Vendor</string>
+    <string name="security_component_kernel" translatable="false">Kernel</string>
 </resources>

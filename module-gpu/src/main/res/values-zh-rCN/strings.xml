@@ -6,32 +6,49 @@
 <resources>
     <!-- GPU section -->
     <string name="section_gpu_name">GPU</string>
-    <string name="section_gpu_description">GPU info</string>
+    <string name="section_gpu_description">GPU 信息</string>
+
     <!-- Vulkan information -->
-    <string name="gpu_vulkan_supported">Supported</string>
-    <string name="gpu_vulkan_device">Vulkan device %d</string>
-    <string name="gpu_vulkan_api_version">API version</string>
-    <string name="gpu_vulkan_driver_version">Driver version</string>
-    <string name="gpu_vulkan_vendor_id">Vendor ID</string>
-    <string name="gpu_vulkan_registered_vendor_id">Registered vendor ID</string>
-    <string name="gpu_vulkan_device_id">Device ID</string>
-    <string name="gpu_vulkan_device_type">Device type</string>
-    <string name="gpu_vulkan_device_name">Device name</string>
+    <string name="gpu_vulkan" translatable="false">Vulkan</string>
+    <string name="gpu_vulkan_supported">支持</string>
+    <string name="gpu_vulkan_device">Vulkan 设备 %d</string>
+    <string name="gpu_vulkan_api_version">API 版本</string>
+    <string name="gpu_vulkan_api_version_format" translatable="false">%s.%s Variant %s Patch %s</string>
+    <string name="gpu_vulkan_driver_version">驱动版本</string>
+    <string name="gpu_vulkan_vendor_id">供应商 ID</string>
+    <string name="gpu_vulkan_registered_vendor_id">注册供应商 ID</string>
+    <string name="gpu_vulkan_device_id">设备 ID</string>
+    <string name="gpu_vulkan_device_type">设备类型</string>
+    <string name="gpu_vulkan_device_name">设备名称</string>
+
     <!-- Vulkan physical device type -->
-    <string name="vulkan_physical_device_type_other">Other</string>
-    <string name="vulkan_physical_device_type_integrated_gpu">Integrated GPU</string>
-    <string name="vulkan_physical_device_type_discrete_gpu">Discrete GPU</string>
-    <string name="vulkan_physical_device_type_virtual_gpu">Virtual GPU</string>
+    <string name="vulkan_physical_device_type_other">其他</string>
+    <string name="vulkan_physical_device_type_integrated_gpu">集成 GPU</string>
+    <string name="vulkan_physical_device_type_discrete_gpu">独立 GPU</string>
+    <string name="vulkan_physical_device_type_virtual_gpu">虚拟 GPU</string>
     <string name="vulkan_physical_device_type_cpu">CPU</string>
+
     <!-- Vulkan vendors -->
+    <string name="vulkan_vendor_khronos" translatable="false">The Khronos Group, Inc.</string>
+    <string name="vulkan_vendor_viv" translatable="false">Vivante</string>
+    <string name="vulkan_vendor_vsi" translatable="false">VeriSilicon</string>
+    <string name="vulkan_vendor_kazan" translatable="false">Kazan</string>
+    <string name="vulkan_vendor_codeplay" translatable="false">Codeplay</string>
+    <string name="vulkan_vendor_mesa" translatable="false">Mesa</string>
+    <string name="vulkan_vendor_pocl" translatable="false">Portable Computing Language</string>
+    <string name="vulkan_vendor_mobileye" translatable="false">Mobileye</string>
+
     <!-- EGL information -->
-    <string name="gpu_egl_vendor">Vendor</string>
-    <string name="gpu_egl_version">Version</string>
-    <string name="gpu_egl_extensions">Extensions</string>
-    <string name="gpu_egl_client_api">Client API</string>
+    <string name="gpu_egl" translatable="false">EGL</string>
+    <string name="gpu_egl_vendor">供应商</string>
+    <string name="gpu_egl_version">版本</string>
+    <string name="gpu_egl_extensions">扩展</string>
+    <string name="gpu_egl_client_api">客户端 API</string>
+
     <!-- OpenGL information -->
-    <string name="gpu_opengl_renderer">Renderer</string>
-    <string name="gpu_opengl_vendor">Vendor</string>
-    <string name="gpu_opengl_version">Version</string>
-    <string name="gpu_opengl_extensions">Extensions</string>
+    <string name="gpu_opengl" translatable="false">OpenGL</string>
+    <string name="gpu_opengl_renderer">渲染器</string>
+    <string name="gpu_opengl_vendor">供应商</string>
+    <string name="gpu_opengl_version">版本</string>
+    <string name="gpu_opengl_extensions">扩展</string>
 </resources>

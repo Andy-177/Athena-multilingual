@@ -5,23 +5,26 @@
 -->
 <resources>
     <!-- Light -->
-    <string name="light">Light %d</string>
-    <string name="light_name">Name</string>
-    <string name="light_ordinal">Ordinal</string>
-    <string name="light_type">Type</string>
-    <string name="light_has_brightness_control">Has brightness control</string>
-    <string name="light_has_rgb_control">Has RGB control</string>
-    <string name="light_state">State</string>
+    <string name="light">灯 %d</string>
+    <string name="light_name">名称</string>
+    <string name="light_ordinal">序号</string>
+    <string name="light_type">类型</string>
+    <string name="light_has_brightness_control">支持亮度控制</string>
+    <string name="light_has_rgb_control">支持 RGB 控制</string>
+    <string name="light_state">状态</string>
+
     <!-- Light types -->
-    <string name="light_type_backlight">Backlight</string>
-    <string name="light_type_keyboard">Keyboard</string>
-    <string name="light_type_buttons">Buttons</string>
-    <string name="light_type_battery">Battery</string>
-    <string name="light_type_notifications">Notifications</string>
-    <string name="light_type_attention">Attention</string>
-    <string name="light_type_microphone">Microphone</string>
-    <string name="light_type_camera">Camera</string>
-    <string name="light_type_input">Input</string>
-    <string name="light_type_player_id">Player ID</string>
-    <string name="light_type_keyboard_backlight">Keyboard backlight</string>
+    <string name="light_type_backlight">背光</string>
+    <string name="light_type_keyboard">键盘</string>
+    <string name="light_type_buttons">按钮</string>
+    <string name="light_type_battery">电池</string>
+    <string name="light_type_notifications">通知</string>
+    <string name="light_type_attention">提醒</string>
+    <string name="light_type_bluetooth" translatable="false">Bluetooth</string>
+    <string name="light_type_wifi" translatable="false">Wi-Fi</string>
+    <string name="light_type_microphone">麦克风</string>
+    <string name="light_type_camera">相机</string>
+    <string name="light_type_input">输入</string>
+    <string name="light_type_player_id">播放器 ID</string>
+    <string name="light_type_keyboard_backlight">键盘背光</string>
 </resources>
