@@ -35,6 +35,7 @@ class SettingsViewModel(
     // General
     val theme = preferencesRepository.theme
     val dynamicColors = preferencesRepository.dynamicColors
+    val language = preferencesRepository.language
 
     // Export data
     private val _exportDataStatus = MutableSharedFlow<ExportDataStatus?>()
