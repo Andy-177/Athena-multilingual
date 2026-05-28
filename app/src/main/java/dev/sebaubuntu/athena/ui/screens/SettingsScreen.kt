@@ -27,7 +27,6 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.selection.selectableGroup
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.AlertDialogDefaults
 import androidx.compose.material3.BasicAlertDialog
 import androidx.compose.material3.Button
@@ -171,6 +170,7 @@ fun SettingsScreen(
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun LanguagePreferenceListItem(
     preferenceHolder: dev.sebaubuntu.athena.repositories.PreferencesRepository.PreferenceHolder<String>,
@@ -184,7 +184,6 @@ private fun LanguagePreferenceListItem(
     if (dialogOpened) {
         var selectedTag by remember { mutableStateOf(currentTag) }
 
-        // 使用 BasicAlertDialog 替代 AlertDialog 以支持滚动
         BasicAlertDialog(
             onDismissRequest = { dialogOpened = false }
         ) {
@@ -198,14 +197,12 @@ private fun LanguagePreferenceListItem(
                 Column(
                     modifier = Modifier.fillMaxSize()
                 ) {
-                    // 标题
                     Text(
                         text = "Language",
                         style = MaterialTheme.typography.headlineSmall,
                         modifier = Modifier.padding(20.dp)
                     )
                     
-                    // 可滚动的语言列表
                     LazyColumn(
                         modifier = Modifier.weight(1f),
                     ) {
@@ -236,7 +233,6 @@ private fun LanguagePreferenceListItem(
                         }
                     }
                     
-                    // 按钮区域
                     Row(
                         modifier = Modifier
                             .fillMaxWidth()
